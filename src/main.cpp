@@ -11,12 +11,11 @@ int main() {
     std::string string;
     std::string line;
     std::ifstream input("text.txt");
-    while (std::getline(input, line))
-    {
+    while (std::getline(input, line)){
         string += line + " ";
     }
     GenerationText generationtext;
     generationtext.Learn(string, NPREF);
-    std::cout << generationtext.Create(MAXGEN,0,NPREF);
+    std::cout << generationtext.Create(MAXGEN, 0, NPREF);
     return 0;
 }

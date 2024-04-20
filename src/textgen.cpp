@@ -2,11 +2,10 @@
 #include <fstream>
 #include <random>
 #include <functional>
-#include "../include/textgen.h"
 #include <iostream>
-#include <random>
+#include "../include/textgen.h"
 
-void GenerationText::Learn(std::string& string, int size) { 
+void GenerationText::Learn(const std::string& string, int size) {
     std::istringstream text(string);
     prefix prefix;
     std::string word;
@@ -47,5 +46,5 @@ void GenerationText::set(std::map<prefix, std::vector<std::string>> string) {
 }
 
 std::map<prefix, std::vector<std::string>> GenerationText::get() {
-   return statetab;
+    return statetab;
 }
