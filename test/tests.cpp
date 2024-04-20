@@ -36,10 +36,11 @@ TEST(test4, NotOnceSuffix) {
 TEST(test5, CreateText) {
     GenerationText generator;
     std::map<prefix, std::vector<std::string> > str1 = {
-        { { "why" }, { "abody", "doing" } },
-        { { "wha" }, { "abody" } }
+        { { "why" }, { "bod"} },
+        { { "bod" }, { "abody", "doin" } },
+        { { "abody" }, { "give" } }
     };
     generator.set(str1);
-    std::string str = generator.Create(10, time(0));
+    std::string str = generator.Create(10, 512);
     EXPECT_EQ("wha abody ", str);
 }
