@@ -24,7 +24,6 @@ void GenerationText::Learn(const std::string& string, int size) {
 std::string GenerationText::Create(int length, int seed) {
     //if (seed == time(NULL)) seed = time(NULL);
     std::default_random_engine generation(seed);
-    
     prefix CurPref = fprefix;
     std::string string;
     for (auto it = CurPref.begin(); it != CurPref.end(); ++it) {

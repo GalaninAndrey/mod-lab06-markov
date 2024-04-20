@@ -16,6 +16,6 @@ int main() {
     }
     GenerationText generationtext;
     generationtext.Learn(string, NPREF);
-    std::cout << generationtext.Create(MAXGEN,time(0));
+    std::cout << generationtext.Create(MAXGEN, time(0));
     return 0;
 }
