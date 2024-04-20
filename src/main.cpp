@@ -11,7 +11,7 @@ int main() {
     std::string string;
     std::string line;
     std::ifstream input("text.txt");
-    while (std::getline(input, line)){
+    while (std::getline(input, line)) {
         string += line + " ";
     }
     GenerationText generationtext;
