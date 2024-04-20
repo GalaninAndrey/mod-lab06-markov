@@ -21,7 +21,7 @@ TEST(test2, PrefixSuffix) {
 TEST(test3, OnceSuffix) {
     GenerationText generator;
     generator.Learn("hello everybody but not why how hello hi beacuse", 2);
-    std::string gen = generator.Create(150, 10, 2);
+    std::string gen = generator.Create(150, time(0), 2);
     EXPECT_EQ(gen, "hello hi beacuse ");
 }
 
@@ -36,10 +36,10 @@ TEST(test4, NotOnceSuffix) {
 TEST(test5, CreateText) {
     GenerationText generator;
     std::map<prefix, std::vector<std::string> > str1 = {
-        { { "why" }, { "everybody", "do" } },
-        { { "what" }, { "everybody" } }
+        { { "why" }, { "abody", "doing" } },
+        { { "wha" }, { "abody" } }
     };
     generator.set(str1);
     std::string str = generator.Create(10, 1, 20);
-    EXPECT_EQ("what everybody ", str);
+    EXPECT_EQ("wha abody ", str);
 }
