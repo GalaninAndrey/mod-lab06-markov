@@ -40,6 +40,6 @@ TEST(test5, CreateText) {
         { { "wha" }, { "abody" } }
     };
     generator.set(str1);
-    std::string str = generator.Create(10, 1);
+    std::string str = generator.Create(10, 20);
     EXPECT_EQ("wha abody ", str);
 }
