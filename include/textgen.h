@@ -16,7 +16,7 @@ class GenerationText {
     prefix fprefix;
  public:
     void Learn(const std::string& string, int prefix_number);
-    std::string Create(int length, int seed, int size);
+    std::string Create(int length, int seed);
     void set(std::map<prefix, std::vector<std::string>> string);
     std::map<prefix, std::vector<std::string>> get();
 };

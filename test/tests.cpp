@@ -20,8 +20,8 @@ TEST(test2, PrefixSuffix) {
 
 TEST(test3, OnceSuffix) {
     GenerationText generator;
-    generator.Learn("hello everybody but not why how hello hi beacuse", 2);
-    std::string gen = generator.Create(150, time(0), 2);
+    generator.Learn("hello everybody but not why how hello hi beacuse", 1);
+    std::string gen = generator.Create(150, time(0));
     EXPECT_EQ(gen, "hello hi beacuse ");
 }
 

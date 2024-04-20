@@ -18,13 +18,13 @@ void GenerationText::Learn(const std::string& string, int size) {
         statetab[prefix].push_back(word);
         prefix.pop_front();
         prefix.push_back(word);
-    }
+}
 }
 
-std::string GenerationText::Create(int length, int seed, int size) {
-    //if (seed == 0) seed = time(0);
+std::string GenerationText::Create(int length, int seed) {
+    //if (seed == time(NULL)) seed = time(NULL);
     std::default_random_engine generation(seed);
-
+    
     prefix CurPref = fprefix;
     std::string string;
     for (auto it = CurPref.begin(); it != CurPref.end(); ++it) {

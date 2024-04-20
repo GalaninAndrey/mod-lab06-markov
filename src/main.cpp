@@ -4,7 +4,7 @@
 #include <sstream>
 #include <fstream>
 #include "../include/textgen.h"
-const int NPREF = 2;
+const int NPREF = 1;
 const int MAXGEN = 1000;
 
 int main() {
@@ -16,6 +16,6 @@ int main() {
     }
     GenerationText generationtext;
     generationtext.Learn(string, NPREF);
-    std::cout << generationtext.Create(MAXGEN, time(0), NPREF);
+    std::cout << generationtext.Create(MAXGEN,time(0));
     return 0;
 }
