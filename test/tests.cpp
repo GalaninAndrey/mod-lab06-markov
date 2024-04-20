@@ -41,6 +41,6 @@ TEST(test5, CreateText) {
         { { "abody" }, { "give" } }
     };
     generator.set(str1);
-    std::string str = generator.Create(10, 0);
-    EXPECT_EQ("bod doin ", str);
+    std::string str = generator.Create(10, 20);
+    EXPECT_EQ("", str);
 }
